@@ -3,7 +3,7 @@ from .dataread import DataRead as dr
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from scipy.stats import randint as sp_randint
-from scipy.stats import randint as sp_uniform
+from scipy.stats import uniform as sp_uniform
 import pandas as pd
 from sklearn.metrics import roc_auc_score
 from .configurations import configurations as cf
