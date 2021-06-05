@@ -37,8 +37,8 @@ def parameters_list(conf):
             "min_samples_leaf": sp_randint(1, 11)
         }
         random_search = RandomizedSearchCV(clf, param_distributions=param_dist)  # Randomized search on hyper parameters
-        train_x = dr.DataRead.train_x()
-        y = dr.DataRead.train_y()
+        train_x = data.train_x
+        y = data.train_y
         random_forest_model = random_search.fit(train_x, y)
         for key in random_search.best_params_:
             params_iterate.append(random_search.best_params_[key])
